@@ -21,7 +21,7 @@ const Navbar = () => {
 
          <nav className="space-x-5 font-semibold flex items-center">
             <Link href="/products">Product</Link>
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/AddProducts">Add-Product</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>
 

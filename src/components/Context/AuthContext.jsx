@@ -6,23 +6,34 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [isAuth, setIsAuth] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    setIsAuth(localStorage.getItem("auth") === "true");
+    const auth = localStorage.getItem("auth") === "true";
+    setIsAuth(auth);
+
+    if (auth) {
+      // hardcoded user for now
+      setUser({ email: "labibaltasfi1@gmail.com", name: "Labib" });
+    } else {
+      setUser(null);
+    }
   }, []);
 
-  const login = () => {
+  const login = (email) => {
     localStorage.setItem("auth", "true");
-    setIsAuth(true); // 🔥 instant UI update
+    setIsAuth(true);
+    setUser({ email }); // store user
   };
 
   const logout = () => {
     localStorage.removeItem("auth");
-    setIsAuth(false); // 🔥 instant UI update
+    setIsAuth(false);
+    setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuth, login, logout }}>
+    <AuthContext.Provider value={{ isAuth, login, logout, user }}>
       {children}
     </AuthContext.Provider>
   );

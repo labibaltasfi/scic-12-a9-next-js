@@ -8,6 +8,17 @@ export default function ProductsPage() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const FALLBACK_IMAGE = "/placeholder.png"; // put image in /public
+
+    const getSafeImage = (url) => {
+        try {
+            if (!url) return FALLBACK_IMAGE;
+            return new URL(url).href;
+        } catch {
+            return FALLBACK_IMAGE;
+        }
+    };
+
     useEffect(() => {
         fetch("https://scic-12-a9-next-js-server.vercel.app/products")
             .then((res) => res.json())
@@ -29,12 +40,13 @@ export default function ProductsPage() {
                     <Link key={product._id} href={`/products/${product._id}`}>
                         <div className="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
                             <Image
-                                src={product.imageUrl.replace(".com.", ".")} // fix for Next.js
-                                alt={product.title}
+                                src={getSafeImage(product.imageUrl)}
+                                alt={product.title || "Product Image"}
                                 width={400}
                                 height={300}
                                 className="object-cover w-full"
                             />
+
                             <div className="p-4">
                                 <h2 className="text-xl font-semibold mb-2">{product.title}</h2>
                                 <p className="text-gray-600 mb-1">Category: {product.category}</p>
