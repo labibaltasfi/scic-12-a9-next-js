@@ -22,7 +22,7 @@ const Newsletter = () => {
         <p className="text-sm sm:text-base text-[#0B3954] text-opacity-70 mb-6 sm:mb-8 text-center">
           Stay updated with the latest products and exclusive offers from latshopping.
         </p>
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col  items-center gap-4">
           <input
             type="email"
             placeholder="Enter your email"
@@ -33,7 +33,7 @@ const Newsletter = () => {
           />
           <button
             type="submit"
-            className="w-full sm:w-auto py-3 sm:py-4 rounded-xl bg-[#0B3954] text-white font-semibold hover:bg-[#072E42] transition"
+            className="w-full px-3 sm:w-auto py-3 sm:py-4 rounded-xl bg-[#0B3954] text-white font-semibold hover:bg-[#072E42] transition"
           >
             Subscribe
           </button>
