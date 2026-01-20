@@ -14,7 +14,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-[#1B9AAA] to-[#7BE495] py-16 px-6 mt-15 flex justify-center">
+    <section className=" py-16 px-6 flex justify-center">
       <div className="bg-white text-[#0B3954] py-8 px-6 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl rounded-3xl shadow-2xl">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8">
           Subscribe to Our Newsletter
@@ -33,7 +33,7 @@ const Newsletter = () => {
           />
           <button
             type="submit"
-            className="w-full  py-3 rounded-xl  text-[#0B3954] font-semibold hover:bg-[#072E42] transition"
+            className="w-full sm:w-auto py-3 sm:py-4 rounded-xl bg-[#0B3954] text-white font-semibold hover:bg-[#072E42] transition"
           >
             Subscribe
           </button>

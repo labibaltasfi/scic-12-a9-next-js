@@ -22,7 +22,7 @@ const Banner = () => {
         interval={3000}
         swipeable
       >
-        <div className="relative ">
+        <div className="relative h-full">
           <Image
             src="https://i.ibb.co/YBpv4BDH/headphones.png"
             alt="Banner 1"
@@ -32,7 +32,7 @@ const Banner = () => {
           />
         </div>
 
-        <div className="relative ">
+        <div className="relative h-full">
           <Image
             src="https://i.ibb.co/9HvtpT8v/leptop.png"
             alt="Banner 2"
@@ -41,7 +41,7 @@ const Banner = () => {
           />
         </div>
 
-        <div className="relative">
+        <div className="relative  h-full">
           <Image
             src="https://i.ibb.co/Vk2twQq/desk.png"
             alt="Banner 3"
