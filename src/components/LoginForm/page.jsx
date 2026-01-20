@@ -14,8 +14,8 @@ export default function LoginForm() {
     if (email === "labibaltasfi1@gmail.com" && password === "Asdf@1234") {
       localStorage.setItem("auth", "true");
 
-      router.refresh(); 
       router.push("/products");
+      router.refresh(); 
     }
 
     else {
