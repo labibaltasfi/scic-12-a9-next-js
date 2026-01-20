@@ -15,8 +15,8 @@ const Navbar = () => {
   };
    return (
       <div className="px-4 py-3 border-b-2 border-gray-500 flex justify-between items-center flex-wrap w-9/12 mx-auto">
-         <Link href="/" className="font-bold text-5xl">
-            Home
+         <Link href="/" className="font-bold text-3xl">
+            latshop
          </Link>
 
          <nav className="space-x-5 font-semibold flex items-center">
